@@ -27,9 +27,9 @@ class MainWindow(Interface):
         qp.end()
 
     def draw(self, qp):
-        pen = QPen(Qt.yellow, 4, Qt.SolidLine)
-        qp.setPen(pen)
         for _ in range(randint(0, 10)):
+            pen = QPen(QColor(randint(0, 255), randint(0, 255), randint(0, 255)), 4, Qt.SolidLine)
+            qp.setPen(pen)
             size = randint(10, 100)
             qp.drawArc(randint(0, 800), randint(0, 600), size, size, 0, 360 * 16)
 
